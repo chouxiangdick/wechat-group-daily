@@ -6,8 +6,14 @@ description: |
   daily newspaper (HTML + 900px long PNG, mobile-first) — or an optional A3
   printable PDF. Use when the user says "做群日报 / 给 XX 群做日报 / 整理一下
   今天 XX 群 / 微信群日报 / WeChat group daily". A3 variant triggers on
-  "做报纸版 / 印刷版 / A3".
+  "做报纸版 / 印刷版 / A3". Default style is 贴吧阴阳 (tieba_yin_yang);
+  switch via 严肃/纪要 → serious_news, 商务/行业 → business.
 version: 1.0.0
+default_style: tieba_yin_yang
+style_presets:
+  tieba_yin_yang: 贴吧阴阳版（嘴臭/反讽/标题党/黑色幽默，默认）
+  serious_news:   严肃日报版（客观/中性/数据/严谨）
+  business:       商务金句版（洞察/数字/行业术语/价值密度）
 ---
 
 # WeChat Group Daily — Skill
