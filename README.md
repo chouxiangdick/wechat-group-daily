@@ -3,6 +3,20 @@
 > **把本地微信群某天的聊天记录，做成杂志风日报 HTML + 长图 PNG（手机 900px）或 A3 报纸版 PDF，并可自动发回群内。**
 > 端到端：本地微信数据 → 解密 → 文案 → 渲染 → 自检 → 交付 → (可选) 自动发群。
 
+> ⚠️ **免责声明 · Personal Learning Only**
+>
+> 本仓库所有内容**仅供个人学习与研究目的**。工具只在使用者**自己的设备 / 自己拥有合法访问权的数据**上操作。**严禁用于**：
+>
+> - 未经他人同意访问、解析他人账号或数据
+> - 任何商业目的的批量采集、出售、转发
+> - 监控、跟踪、骚扰他人
+> - 违反《中华人民共和国网络安全法》《个人信息保护法》《数据安全法》以及微信、飞书等平台用户协议的任何行为
+>
+> 本工具不提供任何形式的明示或暗示担保。一切使用后果由使用者自行承担。
+> **一旦下载或使用本仓库内容，即视为接受上述声明**。详见 [LICENSE](LICENSE) 的"附加条款"。
+
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 [![Platform: Windows / macOS / Linux](https://img.shields.io/badge/platform-Win%20%7C%20macOS%20%7C%20Linux-lightgrey)]()
@@ -415,9 +429,16 @@ wechat-group-daily/
 
 ## 致谢
 
-- [vantasma-toolkit](https://github.com/xiangruiai/vantasma-toolkit) — 整个解密能力的地基
+### 参考 / Inspired by
+- [【飞行社】我又开源了一个群报纸 skill，让你的微信群每天都能产出一份高质量的报纸](https://www.feishu.cn/community/prompts?id=7641507288469261242&from=ug_from_subscribe_update) — 本项目整体设计思路的源头（"群日报 skill" + agent + render 三段式）
+- [vantasma-toolkit](https://github.com/xiangruiai/vantasma-toolkit) — 整套解密能力（V2 .dat 图片 AES-128-ECB、本地 SQLite db 解密、跨平台 find_keys）的源头
+
+### 依赖 / Powered by
+- [vantasma-toolkit](https://github.com/xiangruiai/vantasma-toolkit) — 解密能力的地基（`vchat` CLI）
 - [影刀 RPA](https://www.yingdao.com/) — v2 自动发群的执行器
 - [Mavis / MiniMax](https://github.com) — AI agent runtime
+
+### 特别感谢
 - 早期测试群（v1 → v4 跑通日报的迭代过程）
 
 ## License
