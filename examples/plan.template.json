@@ -1,0 +1,149 @@
+{
+  "_about": "layout-plan v3.0 mobile 空白模板 · 跑新群时复制此文件改名 layout-plan-<日期>-<群名>-mobile.json 后填写",
+  "_schema": "见 references/mobile-schema.md",
+  "_design": "手机版日报：900px 宽单列卡片流 · 日报骨架+锐评+卡片化（中锐评）",
+  "_workflow": "1) group-daily skill 先产出 story.json 2) 复制本模板，按当天素材填字段 3) python3 make_mobile.py --story ... --plan ... 4) 自检：PNG width=900，HTML 章节数 ≥ 5",
+
+  "masthead": {
+    "name_top": "<群名>",
+    "name_bot": "日 报",
+    "pinyin": "DAILY · RUI PING",
+    "slogan_en": "A NEWSPAPER FOR ONE WECHAT GROUP",
+    "slogan_cn_html": "群 魂 · 共 建 · 共 学&lt;br&gt;抗 压 背 锅 · 今 日 实 录",
+    "promo_tag": "DAILY · RUI PING",
+    "lunar": "丙午年（按日期填农历）",
+    "publisher": "<群名>群出版",
+    "cn_no": "CN M-0603",
+    "issue_code": "代号 R-1",
+    "issue_no": "第 0603 期",
+    "total_pages": "今日 8 卡"
+  },
+
+  "cards": [
+
+    {
+      "_comment": "卡 1 / 头条卡（必选·首屏）",
+      "template": "lead",
+      "kicker": "头 版 锐 评 · 今 日 最 扎 心",
+      "lead_title": "<主标题：扎心/反讽/感叹号>\n<可换行>",
+      "opening": "<opening 100-200 字，开篇直接吐槽，不绕弯>"
+    },
+
+    {
+      "_comment": "卡 2-N / 主稿卡（按 timeline 节点 1-2 张/节点，4 节点约 2-3 张）",
+      "template": "hero",
+      "hero": {
+        "eyebrow": "RUI PING · 主 稿 锐 评",
+        "title_html": "<主稿标题><br><span class=\"deck\">副标题：扎心/反讽/简短</span>",
+        "time": "<HH:MM – HH:MM>",
+        "badge": "<主线 badge>",
+        "cast": [
+          {"name": "<人物A>", "wxid": "wxid_xxx"},
+          {"name": "<人物B>", "wxid": "wxid_xxx"}
+        ],
+        "body": "<第一段叙事 80-120 字>\n\n<第二段叙事 80-120 字>\n\n<第三段叙事 80-120 字>",
+        "image": "file:///tmp/<群名>_images/<图文件名>",
+        "image_alt": "<图描述>",
+        "image_caption": "<图说 60-80 字>",
+        "quotes": [
+          {"text": "<原话>", "who": "<发言人>"},
+          {"text": "<原话>", "who": "<发言人>"}
+        ],
+        "produced_html": "<b>PRODUCED ·</b> <本段产出物>"
+      }
+    },
+
+    {
+      "_comment": "卡 N+1 / 时间线卡（手机竖向时间轴 · 锐评化：抗压实录）",
+      "template": "timeline",
+      "banner": "今 日 抗 压 实 录 · 8 个 时 间 点",
+      "items": [
+        {"time": "HH:MM", "text": "<节点 1>", "who": "<发言人>"},
+        {"time": "HH:MM", "text": "<节点 2>", "who": "<发言人>"},
+        {"time": "HH:MM", "text": "<节点 3>", "who": "<发言人>"},
+        {"time": "HH:MM", "text": "<节点 4>", "who": "<发言人>"},
+        {"time": "HH:MM", "text": "<节点 5>", "who": "<发言人>"},
+        {"time": "HH:MM", "text": "<节点 6>", "who": "<发言人>"}
+      ]
+    },
+
+    {
+      "_comment": "卡 N+2 / 人物高光卡（锐评化：今日主演）",
+      "template": "cast",
+      "banner": "今 日 主 演 · 让 这 一 天 立 住 的 8 个 人",
+      "items": [
+        {"name": "<人物1>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<为什么是他/她，60-80 字>"},
+        {"name": "<人物2>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物3>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物4>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物5>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物6>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物7>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"},
+        {"name": "<人物8>", "wxid": "wxid_xxx", "tag": "<一句话定位>", "desc": "<60-80 字>"}
+      ]
+    },
+
+    {
+      "_comment": "卡 N+3 / 数字条卡（锐评化：今日高压指数）",
+      "template": "stats",
+      "banner": "今 日 高 压 指 数 · BY THE NUMBERS",
+      "items": [
+        {"n": "<数字>", "l": "<锐评化标签>"},
+        {"n": "<数字>", "l": "<锐评化标签>"},
+        {"n": "<数字>", "l": "<锐评化标签>"},
+        {"n": "<数字>", "l": "<锐评化标签>"},
+        {"n": "<数字>", "l": "<锐评化标签>"}
+      ]
+    },
+
+    {
+      "_comment": "卡 N+4 / 金句墙卡（锐评化：锐评金句墙）",
+      "template": "quotes",
+      "banner": "锐 评 金 句 墙 · TODAY'S VOICES",
+      "items": [
+        {"t": "<锐评原话>", "cite": "<发言人> · HH:MM · <场景>"},
+        {"t": "<锐评原话>", "cite": "<发言人> · HH:MM · <场景>"},
+        {"t": "<锐评原话>", "cite": "<发言人> · HH:MM · <场景>"},
+        {"t": "<锐评原话>", "cite": "<发言人> · HH:MM · <场景>"}
+      ]
+    },
+
+    {
+      "_comment": "卡 N+5 / 黑话卡（锐评化：圈内黑话）",
+      "template": "lingo",
+      "banner": "圈 内 黑 话 · TODAY'S LINGO",
+      "items": [
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"},
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"},
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"},
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"},
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"},
+        {"w": "<词>", "d": "<上下文解释 30-50 字>"}
+      ]
+    },
+
+    {
+      "_comment": "卡 N+6 / 明日预告卡（锐评化：ICU 通道）",
+      "template": "tomorrow",
+      "banner": "明 日 预 告 · ICU 通 道",
+      "items": [
+        {"tag": "<时间标签>", "title": "<预告标题>", "desc": "<详情 1-2 句>"},
+        {"tag": "<时间标签>", "title": "<预告标题>", "desc": "<详情 1-2 句>"},
+        {"tag": "<时间标签>", "title": "<预告标题>", "desc": "<详情 1-2 句>"},
+        {"tag": "<时间标签>", "title": "<预告标题>", "desc": "<详情 1-2 句>"}
+      ],
+      "qr": {
+        "image": "file:///tmp/<群名>_images/<二维码图>",
+        "alt": "<二维码描述>",
+        "title": "<二维码标题>",
+        "desc": "<二维码说明 + 有效期>"
+      }
+    },
+
+    {
+      "_comment": "卡 N+7 / 报尾卡（必选·收尾）",
+      "template": "footer"
+    }
+
+  ]
+}

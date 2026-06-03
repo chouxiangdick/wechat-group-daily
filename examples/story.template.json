@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "group_name": "<群名>",
+    "date": "YYYY-MM-DD",
+    "weekday": "周X",
+    "lunar": "<干支年X月X (use lunardate lib, do not hand-write)>",
+    "total_messages": 0,
+    "active_senders": 0,
+    "mood": "<1-2 词>"
+  },
+  "lead": "<2-3 句开场叙述,thesis-first,不要复述>",
+  "hero_timeline": [
+    {
+      "time": "HH:MM — HH:MM",
+      "title": "<事件标题>",
+      "cast": ["<真名/外号>"],
+      "narrative": "<1-3 句,语义深度,不只贴原文>",
+      "mood": "<情绪标签>"
+    }
+  ],
+  "cast_cards": [
+    {
+      "name": "<真实 WeChat 显示名>",
+      "nickname": "<群内梗,可选,只本群使用>",
+      "wxid": "wxid_xxxxxxxx",
+      "role": "<今日角色>",
+      "tagline": "<一句吐槽>",
+      "highlight": "<今天最代表TA的一件事,1-2 句>",
+      "mood": "<情绪>",
+      "avatar_b64": "data:image/jpeg;base64,..."
+    }
+  ],
+  "stats": [
+    {
+      "label": "<维度>",
+      "value": "<数字+单位>",
+      "note": "<解释>"
+    }
+  ],
+  "quotes": [
+    {
+      "who": "<真名/外号>",
+      "quote": "<必须 100% 出现在 chat_log 文件里,不改字不合并>",
+      "context": "<时间+场景>"
+    }
+  ],
+  "lingo": [
+    {
+      "term": "<群内黑话/缩写/经典梗>",
+      "explain": "<黑色幽默一行解释>",
+      "tone": "吐槽/致敬/科普"
+    }
+  ],
+  "qa": [
+    {
+      "q": "<群里真问过的问题>",
+      "a": "<真实回答 + 后续发展,1-2 句>"
+    }
+  ],
+  "footer_quote": "<一句最贴合今日气质的原话 + 出处>"
+}

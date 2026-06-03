@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+venv/
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Output artifacts (don't commit rendered daily)
+*.html
+!examples/*.html
+!references/*.html
+*.png
+!examples/*.png
+*.pdf
+
+# Test / debug
+*.log
+*.tmp
+/tmp/
+test_output/
+decrypted/
+out/
+
+# Secrets / local config
+.env
+config.local.json
+*.key
+aes_key.bin
